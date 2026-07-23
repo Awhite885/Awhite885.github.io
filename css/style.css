@@ -26,25 +26,275 @@ body {
     border-bottom: 1px solid #b9a77f;
 }
 
-.site-header h1 {
-    margin: 0;
-    color: #102f5b;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 4rem;
-    letter-spacing: 4px;
-}
+    .site-header h1 {
+        margin: 0;
+        color: #102f5b;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 4rem;
+        letter-spacing: 4px;
+    }
 
-.site-header h2 {
-    margin: 10px 0 0;
-    color: #173b68;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 1.8rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
+    .site-header h2 {
+        margin: 10px 0 0;
+        color: #173b68;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
 
 .course-title {
     margin-top: 8px;
     color: #555555;
     font-family: "Courier New", Courier, monospace;
+}
+
+/* -----------------------------
+   Navigation
+------------------------------*/
+
+.main-navigation {
+    background: #123a68;
+}
+
+    .main-navigation ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-navigation li {
+        border-right: 1px solid rgba(255,255,255,.25);
+    }
+
+        .main-navigation li:last-child {
+            border-right: none;
+        }
+
+    .main-navigation a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 18px 18px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: .78rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .6px;
+        text-align: center;
+    }
+
+        .main-navigation a:hover {
+            background: #e8dfcc;
+            color: #123a68;
+        }
+
+    .main-navigation .active {
+        background: #f2ecde;
+        color: #123a68;
+    }
+/* ---------- Main Layout ---------- */
+
+main {
+    padding: 40px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.paper-card {
+    background: white;
+    padding: 30px;
+    box-shadow: 0 6px 14px rgba(0,0,0,.12);
+    border: 1px solid #ddd;
+}
+
+.section-heading {
+    color: #173b68;
+    font-family: "Courier New";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #173b68;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.portfolio-list {
+    padding-left: 20px;
+    line-height: 2;
+}
+/* ---------- Header Details ---------- */
+
+.site-header {
+    position: relative;
+    overflow: hidden;
+}
+
+    .site-header::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 40px;
+        width: 220px;
+        height: 220px;
+        background-image: url("../images/fingerprint.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: .08;
+        transform: rotate(-8deg);
+        pointer-events: none;
+    }
+
+.project-stamp {
+    position: absolute;
+    right: 35px;
+    bottom: 25px;
+    padding: 9px 14px;
+    border: 3px double #173b68;
+    color: #173b68;
+    background-color: rgba(248, 244, 234, 0.75);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1.35;
+    text-align: center;
+    text-transform: uppercase;
+    transform: rotate(-2deg);
+    z-index: 2;
+}
+
+.site-header h1,
+.site-header h2,
+.course-title {
+    position: relative;
+    z-index: 2;
+}
+@media (max-width: 800px) {
+
+    .project-stamp {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+    .site-header::after {
+        right: 10px;
+        font-size: 130px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-navigation ul {
+        flex-wrap: wrap;
+    }
+}
+.case-status {
+    margin-top: 30px;
+    background-color: #f9f6ee;
+    border: 1px solid #b9aa8d;
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+.case-status-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 20px;
+    background-color: #173b68;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.status-item {
+    padding: 18px 20px;
+    border-right: 1px solid #d5cab6;
+    border-bottom: 1px solid #d5cab6;
+}
+
+    .status-item:nth-child(3n) {
+        border-right: none;
+    }
+
+    .status-item:nth-last-child(-n + 3) {
+        border-bottom: none;
+    }
+
+.status-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #173b68;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.status-complete {
+    font-weight: bold;
+}
+
+    .status-complete::before {
+        content: "✓ ";
+    }
+
+.status-progress::before {
+    content: "□ ";
+}
+
+@media (max-width: 800px) {
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .status-item {
+        border-right: none;
+    }
+
+        .status-item:nth-last-child(-n + 3) {
+            border-bottom: 1px solid #d5cab6;
+        }
+
+        .status-item:last-child {
+            border-bottom: none;
+        }
+
+    .case-status-header {
+        flex-direction: column;
+    }
+}
+/* ---------- Evidence Scale ---------- */
+
+.evidence-ruler {
+    margin-top: 45px;
+    height: 70px;
+    border-top: 2px solid #665b49;
+    background-image: repeating-linear-gradient( 90deg, #665b49 0, #665b49 2px, transparent 2px, transparent 20px );
+    background-size: auto 18px;
+    background-repeat: repeat-x;
+}
+
+.ruler-numbers {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 28px;
+    color: #5f5648;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .8rem;
 }
