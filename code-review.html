@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Software Design and Engineering enhancement for Albert White's CS 499 Evidence Tracker capstone project.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>
+        Software Design &amp; Engineering | Albert White
+    </title>
+</head>
+
+<body>
+
+    <div class="site-container">
+
+        <!-- Website Header -->
+        <header class="site-header">
+
+            <h1>Albert White</h1>
+
+            <h2>Computer Science ePortfolio</h2>
+
+            <p class="course-title">
+                CS 499 Computer Science Capstone
+            </p>
+
+            <div class="project-stamp">
+                Case File<br>
+                Evidence Tracker<br>
+                CS 499 Capstone
+            </div>
+
+        </header>
+
+        <!-- Main Navigation -->
+        <nav class="main-navigation"
+             aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a class="active"
+                       href="code-review.html">
+                        Code Review
+                    </a>
+                </li>
+
+                <li>
+                    <a href="software-design.html">
+                        Software Design &amp; Engineering
+                    </a>
+                </li>
+
+                <li>
+                    <a href="algorithms.html">
+                        Algorithms &amp; Data Structures
+                    </a>
+                </li>
+
+                <li>
+                    <a href="databases.html">
+                        Databases
+                    </a>
+                </li>
+
+                <li>
+                    <a href="self-assessment.html">
+                        Professional Self-Assessment
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Page Content -->
+        <main class="enhancement-page">
+
+            <!-- Page Introduction -->
+            <section class="paper-card page-introduction">
+
+                <p class="section-label">
+                    Initial Artifact Analysis
+                </p>
+
+                <h2 class="section-heading">
+                    Code Review
+                </h2>
+
+                <p>
+                    The code review served as the starting point for the CS 499
+                    capstone project. During the review, I examined the original
+                    Evidence Tracker application to evaluate its structure,
+                    functionality, maintainability, security, and database design.
+                </p>
+
+                <p>
+                    The review helped identify areas where the application could be
+                    improved through software design and engineering, algorithms and
+                    data structures, and database enhancements. These findings guided
+                    the work completed throughout the remainder of the capstone.
+                </p>
+
+            </section>
+
+            <!-- Artifact Overview -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Original Artifact
+                </h2>
+
+                <p>
+                    The artifact selected for the capstone was an Android application
+                    originally created in CS 360: Mobile Architecture and Programming.
+                    The original project was designed as an inventory management
+                    application that allowed users to create an account, log in, and
+                    perform basic create, read, update, and delete operations using a
+                    local SQLite database.
+                </p>
+
+                <p>
+                    I later adapted the project into an Evidence Tracker because the
+                    subject closely aligns with my professional experience as a Crime
+                    Scene Investigator. Although the application provided a functional
+                    foundation, the review identified several opportunities to improve
+                    its architecture, security, usability, and data management.
+                </p>
+
+            </section>
+
+            <!-- Review Categories -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Areas Evaluated
+                </h2>
+
+                <div class="objective-grid">
+
+                    <div class="objective-item">
+                        <span class="objective-check" aria-hidden="true">
+                            1
+                        </span>
+
+                        <span>
+                            Software design, application structure, authentication,
+                            authorization, and user experience.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check" aria-hidden="true">
+                            2
+                        </span>
+
+                        <span>
+                            Algorithms and data structures used to search, organize,
+                            validate, and process evidence records.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check" aria-hidden="true">
+                            3
+                        </span>
+
+                        <span>
+                            SQLite database structure, table relationships, queries,
+                            data integrity, and scalability.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check" aria-hidden="true">
+                            4
+                        </span>
+
+                        <span>
+                            Code readability, maintainability, error handling, and
+                            opportunities for future development.
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Findings -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Key Findings
+                </h2>
+
+                <p>
+                    The original application successfully demonstrated the core
+                    requirements of the CS 360 project, including account creation,
+                    user login, persistent SQLite storage, and standard CRUD
+                    operations. These features provided a useful foundation for the
+                    capstone enhancements.
+                </p>
+
+                <p>
+                    The review also identified several weaknesses. User roles were not
+                    clearly separated, new accounts did not require administrative
+                    approval, and access to application functions was not sufficiently
+                    restricted. The inventory-based structure also lacked the
+                    specialized fields and workflows needed for evidence management.
+                </p>
+
+                <p>
+                    Additional opportunities existed to improve evidence searching,
+                    sorting, validation, database organization, and the long-term
+                    maintainability of the codebase.
+                </p>
+
+            </section>
+
+            <!-- Planned Enhancements -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Enhancement Plan
+                </h2>
+
+                <div class="role-grid">
+
+                    <article class="role-card">
+
+                        <h3>
+                            Software Design &amp; Engineering
+                        </h3>
+
+                        <ul class="permission-list">
+                            <li class="allowed">
+                                Add secure authentication
+                            </li>
+
+                            <li class="allowed">
+                                Implement administrator approval
+                            </li>
+
+                            <li class="allowed">
+                                Add role-based access control
+                            </li>
+
+                            <li class="allowed">
+                                Improve navigation and usability
+                            </li>
+                        </ul>
+
+                    </article>
+
+                    <article class="role-card">
+
+                        <h3>
+                            Algorithms &amp; Data Structures
+                        </h3>
+
+                        <ul class="permission-list">
+                            <li class="allowed">
+                                Improve evidence retrieval
+                            </li>
+
+                            <li class="allowed">
+                                Add search and sorting logic
+                            </li>
+
+                            <li class="allowed">
+                                Strengthen validation
+                            </li>
+
+                            <li class="allowed">
+                                Improve processing efficiency
+                            </li>
+                        </ul>
+
+                    </article>
+
+                    <article class="role-card">
+
+                        <h3>
+                            Databases
+                        </h3>
+
+                        <ul class="permission-list">
+                            <li class="allowed">
+                                Redesign the SQLite schema
+                            </li>
+
+                            <li class="allowed">
+                                Add evidence-specific fields
+                            </li>
+
+                            <li class="allowed">
+                                Improve table relationships
+                            </li>
+
+                            <li class="allowed">
+                                Strengthen data integrity
+                            </li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- Video -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Code Review Video
+                </h2>
+
+                <p>
+                    The following video presents the complete code review of the
+                    original artifact. It explains the application's existing
+                    functionality, identifies areas for improvement, and outlines the
+                    enhancements planned for each of the three capstone categories.
+                </p>
+
+                <div class="video-container">
+
+                    <iframe width="100%"
+                            height="650"
+                            src="https://www.youtube.com/embed/FX2Q2F52RRc"
+                            title="CS 499 Code Review"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                    </iframe>
+
+                </div>
+
+            </section>
+
+            <!-- Reflection -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Reflection
+                </h2>
+
+                <p>
+                    Conducting the code review helped establish a clear understanding
+                    of the application's strengths and weaknesses before development
+                    began. Rather than immediately changing the code, I first examined
+                    the system as a whole and considered how each planned enhancement
+                    would affect the user interface, application logic, and database.
+                </p>
+
+                <p>
+                    This process provided a structured roadmap for the capstone and
+                    reduced the likelihood of making isolated changes that would not
+                    support the larger goals of the application. It also reinforced
+                    the importance of reviewing existing software before beginning a
+                    major redesign.
+                </p>
+
+            </section>
+
+            <!-- Evidence Scale -->
+            <div class="evidence-ruler" aria-hidden="true">
+
+                <div class="ruler-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
