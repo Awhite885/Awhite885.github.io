@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Algorithms and Data Structures enhancement for Albert White's CS 499 Evidence Tracker capstone project.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>
+        Algorithms &amp; Data Structures | Albert White
+    </title>
+</head>
+
+<body>
+
+    <div class="site-container">
+
+        <!-- Website Header -->
+        <header class="site-header">
+
+            <h1>Albert White</h1>
+
+            <h2>Computer Science ePortfolio</h2>
+
+            <p class="course-title">
+                CS 499 Computer Science Capstone
+            </p>
+
+            <div class="project-stamp">
+                Case File<br>
+                Evidence Tracker<br>
+                CS 499 Capstone
+            </div>
+
+        </header>
+
+        <!-- Main Navigation -->
+        <nav class="main-navigation"
+             aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="code-review.html">
+                        Code Review
+                    </a>
+                </li>
+
+                <li>
+                    <a href="software-design.html">
+                        Software Design &amp; Engineering
+                    </a>
+                </li>
+
+                <li>
+                    <a class="active"
+                       href="algorithms.html">
+                        Algorithms &amp; Data Structures
+                    </a>
+                </li>
+
+                <li>
+                    <a href="databases.html">
+                        Databases
+                    </a>
+                </li>
+
+                <li>
+                    <a href="self-assessment.html">
+                        Professional Self-Assessment
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Page Content -->
+        <main class="enhancement-page">
+
+            <!-- Introduction -->
+            <section class="paper-card page-introduction">
+
+                <p class="section-label">
+                    Enhancement Two
+                </p>
+
+                <h2 class="section-heading">
+                    Algorithms &amp; Data Structures
+                </h2>
+
+                <p>
+                    This enhancement focused on improving how the Evidence
+                    Tracker locates, organizes, and displays evidence records.
+                    The original application allowed users to browse the full
+                    evidence list, but it did not provide search, filtering,
+                    or sorting features.
+                </p>
+
+                <p>
+                    Search functionality was added for case IDs and item
+                    descriptions. Filtering was added for evidence status and
+                    storage location, while sorting options allow records to
+                    be organized by case ID, description, status, or location.
+                    These enhancements improve usability as the number of
+                    stored evidence records increases.
+                </p>
+
+            </section>
+
+            <!-- Objectives -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Enhancement Objectives
+                </h2>
+
+                <div class="objective-grid">
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Add search functionality for case IDs and evidence
+                            descriptions.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Filter evidence records by status and storage
+                            location.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Add multiple ascending and descending sorting
+                            options.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Preserve the complete evidence collection while
+                            displaying filtered results separately.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Reduce unnecessary database operations during
+                            search and filtering.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Display the number of evidence records currently
+                            shown.
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Original Approach -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Original Approach
+                </h2>
+
+                <p>
+                    The original application stored and displayed evidence
+                    records through a RecyclerView connected to data retrieved
+                    from a local SQLite database. Users could scroll through
+                    the entire collection, but there was no way to quickly
+                    locate a specific case or item.
+                </p>
+
+                <p>
+                    This approach met the original course requirements, but it
+                    became less efficient as the number of evidence records
+                    increased. Users had to manually review the full list and
+                    could not customize the displayed order or narrow the
+                    records according to evidence status or location.
+                </p>
+
+            </section>
+
+            <!-- Search -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Search Algorithm
+                </h2>
+
+                <p>
+                    Search functionality allows users to locate evidence by
+                    case ID or item description. The application compares the
+                    entered search value against each evidence record and
+                    places matching records into a separate filtered
+                    collection.
+                </p>
+
+                <p>
+                    The original collection remains unchanged, allowing the
+                    user to clear the search and immediately return to the
+                    complete evidence list without performing an additional
+                    database query.
+                </p>
+
+                <div class="screenshot-grid screenshot-grid-two">
+
+                    <figure class="evidence-photo">
+
+                        <img src="images/enhancement-2/all-evidence-records.jpg"
+                             alt="Main Evidence Tracker grid displaying all evidence records"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 1.</strong>
+                            Main evidence grid displaying the complete
+                            evidence collection before a search or filter is
+                            applied.
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="evidence-photo">
+
+                        <img src="images/enhancement-2/case-search-results.jpg"
+                             alt="Evidence Tracker results after searching by case ID"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 2.</strong>
+                            Evidence records displayed after searching for a
+                            specific case ID.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+                <div class="code-example">
+
+                    <div class="code-label">
+                        Search Processing Example
+                    </div>
+
+                    <pre><code>String searchValue =
+        searchInput.trim().toLowerCase();
+
+filteredEvidence.clear();
+
+for (EvidenceItem evidence : allEvidence) {
+
+    String caseId =
+            evidence.getCaseId().toLowerCase();
+
+    String description =
+            evidence.getItem().toLowerCase();
+
+    if (caseId.contains(searchValue)
+            || description.contains(searchValue)) {
+
+        filteredEvidence.add(evidence);
+    }
+}
+
+evidenceAdapter.updateData(filteredEvidence);</code></pre>
+
+                </div>
+
+            </section>
+
+            <!-- Filtering -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Filtering Algorithm
+                </h2>
+
+                <p>
+                    Filtering allows users to narrow the evidence collection
+                    according to evidence status and storage location. The
+                    application begins with the full collection and evaluates
+                    each record against the selected criteria.
+                </p>
+
+                <p>
+                    Only records that satisfy the active filter conditions are
+                    added to the filtered list. Search terms, filters, and
+                    sorting choices can be combined within the same workflow
+                    without modifying the original evidence collection.
+                </p>
+
+                <div class="screenshot-grid screenshot-grid-two">
+
+                    <figure class="evidence-photo">
+
+                        <img src="images/enhancement-2/filter-dialog.jpg"
+                             alt="Evidence Tracker filter dialog with status location and sorting controls"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 3.</strong>
+                            Filter dialog providing evidence status, storage
+                            location, and sorting options.
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="evidence-photo">
+
+                        <img src="images/enhancement-2/filtered-evidence-records.jpg"
+                             alt="Evidence records after selected filters have been applied"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 4.</strong>
+                            Evidence records remaining after the selected
+                            filter criteria are applied.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </section>
+
+            <!-- Sorting -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Sorting Algorithm
+                </h2>
+
+                <div class="feature-layout">
+
+                    <div class="feature-text">
+
+                        <p>
+                            Multiple sorting options allow evidence records to
+                            be organized by case ID, item description, status,
+                            or location. Users can choose ascending or
+                            descending order depending on the selected field.
+                        </p>
+
+                        <p>
+                            Sorting occurs after the current search and filter
+                            conditions have been applied. This produces a final
+                            result set that contains only the relevant records
+                            and arranges them according to the user's selected
+                            preference.
+                        </p>
+
+                        <p>
+                            The same evidence collection can therefore support
+                            multiple views without changing the records stored
+                            in SQLite.
+                        </p>
+
+                    </div>
+
+                    <figure class="evidence-photo feature-image">
+
+                        <img src="images/enhancement-2/sorted-evidence-records.jpg"
+                             alt="Evidence records sorted by item description in descending order"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 5.</strong>
+                            Evidence records sorted by item description in
+                            descending order from Z to A.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </section>
+
+            <!-- Processing Sequence -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Combined Processing Workflow
+                </h2>
+
+                <p>
+                    Search, filtering, and sorting operate as parts of one
+                    processing sequence. The order of these operations affects
+                    the final information displayed to the user.
+                </p>
+
+                <div class="algorithm-summary">
+
+                    <div class="algorithm-step">
+
+                        <span class="step-number">
+                            1
+                        </span>
+
+                        <div>
+                            <h3>Load Complete Collection</h3>
+
+                            <p>
+                                Retrieve the evidence records and preserve them
+                                in the full evidence list.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="algorithm-step">
+
+                        <span class="step-number">
+                            2
+                        </span>
+
+                        <div>
+                            <h3>Apply Search</h3>
+
+                            <p>
+                                Select records matching the entered case ID or
+                                item description.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="algorithm-step">
+
+                        <span class="step-number">
+                            3
+                        </span>
+
+                        <div>
+                            <h3>Apply Filters</h3>
+
+                            <p>
+                                Retain only records matching the selected
+                                status and storage location.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="algorithm-step">
+
+                        <span class="step-number">
+                            4
+                        </span>
+
+                        <div>
+                            <h3>Sort Results</h3>
+
+                            <p>
+                                Arrange the remaining records according to the
+                                chosen field and direction.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="algorithm-step">
+
+                        <span class="step-number">
+                            5
+                        </span>
+
+                        <div>
+                            <h3>Update Display</h3>
+
+                            <p>
+                                Send the filtered collection to the RecyclerView
+                                adapter and display the result count.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="algorithm-step">
+
+                        <span class="step-number">
+                            6
+                        </span>
+
+                        <div>
+                            <h3>Clear Criteria</h3>
+
+                            <p>
+                                Restore the complete list without reloading the
+                                records from the database.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Data Structures -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Data Structure Improvements
+                </h2>
+
+                <p>
+                    The application uses evidence objects and Java collection
+                    classes to organize records while they are processed and
+                    displayed. Each EvidenceItem object groups related
+                    evidence fields such as case ID, item description, status,
+                    location, and timestamp.
+                </p>
+
+                <p>
+                    Two list structures support the algorithmic workflow. One
+                    list preserves the complete dataset, while a second list
+                    holds the records that currently match the user's search,
+                    filter, and sorting selections.
+                </p>
+
+                <div class="comparison-grid">
+
+                    <article class="comparison-card">
+
+                        <h3>
+                            EvidenceItem
+                        </h3>
+
+                        <p>
+                            Represents one evidence record and keeps its
+                            associated values together in a reusable object.
+                        </p>
+
+                    </article>
+
+                    <article class="comparison-card">
+
+                        <h3>
+                            Complete List
+                        </h3>
+
+                        <p>
+                            Preserves every evidence record retrieved from the
+                            SQLite database.
+                        </p>
+
+                    </article>
+
+                    <article class="comparison-card">
+
+                        <h3>
+                            Filtered List
+                        </h3>
+
+                        <p>
+                            Stores only the records that match the active
+                            search, filtering, and sorting conditions.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- Efficiency -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Efficiency &amp; Maintainability
+                </h2>
+
+                <p>
+                    Searching and filtering the in-memory evidence collection
+                    generally require examining each record, producing a
+                    linear time complexity of <strong>O(n)</strong>. This is
+                    appropriate for the current local dataset and keeps the
+                    algorithm straightforward to test and maintain.
+                </p>
+
+                <p>
+                    Comparison-based sorting typically operates in
+                    <strong>O(n log n)</strong> time. Because sorting is
+                    applied only to the current result set, the application
+                    avoids repeatedly sorting records that have already been
+                    removed by search or filtering.
+                </p>
+
+                <div class="complexity-table">
+
+                    <div class="complexity-row complexity-heading">
+                        <span>Operation</span>
+                        <span>Complexity</span>
+                        <span>Purpose</span>
+                    </div>
+
+                    <div class="complexity-row">
+                        <span>Search</span>
+                        <span>O(n)</span>
+                        <span>
+                            Compare evidence records with entered text
+                        </span>
+                    </div>
+
+                    <div class="complexity-row">
+                        <span>Filtering</span>
+                        <span>O(n)</span>
+                        <span>
+                            Evaluate records against selected criteria
+                        </span>
+                    </div>
+
+                    <div class="complexity-row">
+                        <span>Sorting</span>
+                        <span>O(n log n)</span>
+                        <span>
+                            Arrange matching records by the selected field
+                        </span>
+                    </div>
+
+                    <div class="complexity-row">
+                        <span>List Append</span>
+                        <span>O(1) average</span>
+                        <span>
+                            Add a matching record to the filtered collection
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Comparison -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Enhancement Comparison
+                </h2>
+
+                <div class="comparison-table">
+
+                    <div class="comparison-row comparison-header">
+                        <span>Original Application</span>
+                        <span>Enhanced Application</span>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span>
+                            Displayed the complete evidence list
+                        </span>
+
+                        <span>
+                            Searches by case ID or item description
+                        </span>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span>
+                            Required manual scrolling
+                        </span>
+
+                        <span>
+                            Displays only matching evidence records
+                        </span>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span>
+                            No filter controls
+                        </span>
+
+                        <span>
+                            Filters by evidence status and location
+                        </span>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span>
+                            Fixed record order
+                        </span>
+
+                        <span>
+                            Supports multiple ascending and descending sorts
+                        </span>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span>
+                            One displayed collection
+                        </span>
+
+                        <span>
+                            Preserves a complete list and a filtered list
+                        </span>
+                    </div>
+
+                    <div class="comparison-row">
+                        <span>
+                            No visible result count
+                        </span>
+
+                        <span>
+                            Displays the number of records currently shown
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Results -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Enhancement Results
+                </h2>
+
+                <p>
+                    The enhanced application allows users to quickly locate
+                    and organize evidence records according to investigative
+                    needs. Search reduces the need for manual scrolling,
+                    filtering narrows the displayed evidence, and sorting
+                    provides a predictable record order.
+                </p>
+
+                <p>
+                    Maintaining separate complete and filtered collections
+                    also improves flexibility. Search terms, filters, and sort
+                    options can be cleared without repeatedly retrieving the
+                    same evidence records from SQLite.
+                </p>
+
+            </section>
+
+            <!-- Reflection -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Reflection
+                </h2>
+
+                <p>
+                    This enhancement demonstrated that effective algorithm
+                    design involves more than producing the correct result. It
+                    also requires considering efficiency, maintainability, and
+                    how several features interact within the same workflow.
+                </p>
+
+                <p>
+                    Search, filtering, and sorting were each manageable
+                    individually, but combining them required additional
+                    planning. Every operation had to update the displayed
+                    evidence without modifying the original dataset or
+                    disrupting the application's existing functionality.
+                </p>
+
+                <p>
+                    Creating a separate filtered list was one of the most
+                    important design decisions. The complete collection
+                    remains intact, while the displayed results change
+                    dynamically. This approach simplifies clearing search and
+                    filter options and prevents unnecessary database queries.
+                </p>
+
+                <p>
+                    The enhancement strengthened my understanding of how
+                    algorithms and data structures affect the user experience.
+                    The Evidence Tracker now provides a more practical method
+                    for locating and organizing evidence information.
+                </p>
+
+            </section>
+
+            <!-- Evidence Scale -->
+            <div class="evidence-ruler"
+                 aria-hidden="true">
+
+                <div class="ruler-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
