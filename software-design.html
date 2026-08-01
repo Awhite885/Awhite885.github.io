@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Software Design and Engineering enhancement for Albert White's CS 499 Evidence Tracker capstone project.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>
+        Software Design &amp; Engineering | Albert White
+    </title>
+</head>
+
+<body>
+
+    <div class="site-container">
+
+        <!-- Website Header -->
+        <header class="site-header">
+
+            <h1>Albert White</h1>
+
+            <h2>Computer Science ePortfolio</h2>
+
+            <p class="course-title">
+                CS 499 Computer Science Capstone
+            </p>
+
+            <div class="project-stamp">
+                Case File<br>
+                Evidence Tracker<br>
+                CS 499 Capstone
+            </div>
+
+        </header>
+
+        <!-- Main Navigation -->
+        <nav class="main-navigation"
+             aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="code-review.html">
+                        Code Review
+                    </a>
+                </li>
+
+                <li>
+                    <a class="active"
+                       href="software-design.html">
+                        Software Design &amp; Engineering
+                    </a>
+                </li>
+
+                <li>
+                    <a href="algorithms.html">
+                        Algorithms &amp; Data Structures
+                    </a>
+                </li>
+
+                <li>
+                    <a href="databases.html">
+                        Databases
+                    </a>
+                </li>
+
+                <li>
+                    <a href="self-assessment.html">
+                        Professional Self-Assessment
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Page Content -->
+        <main class="enhancement-page">
+
+            <!-- Overview -->
+            <section class="paper-card page-introduction">
+
+                <p class="section-label">
+                    Enhancement One
+                </p>
+
+                <h2 class="section-heading">
+                    Software Design &amp; Engineering
+                </h2>
+
+                <p>
+                    This enhancement focused on redesigning the original
+                    CS 360 inventory management application into a secure
+                    Android-based Evidence Tracker. The software architecture
+                    was expanded to support user authentication,
+                    administrator-controlled account approval, role-based
+                    authorization, and an interface tailored to evidence
+                    management.
+                </p>
+
+                <p>
+                    These improvements strengthened the usability,
+                    maintainability, and security of the application while
+                    aligning the system more closely with real-world evidence
+                    management workflows.
+                </p>
+
+            </section>
+
+            <!-- Enhancement Objectives -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Enhancement Objectives
+                </h2>
+
+                <div class="objective-grid">
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Convert the inventory system into an Evidence
+                            Tracker.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Improve the user interface and application
+                            navigation.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Implement secure user authentication.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Add an administrator-controlled account approval
+                            process.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Introduce role-based access control.
+                        </span>
+                    </div>
+
+                    <div class="objective-item">
+                        <span class="objective-check"
+                              aria-hidden="true">
+                            ✓
+                        </span>
+
+                        <span>
+                            Add administrator user-management features.
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Authentication -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Authentication &amp; User Registration
+                </h2>
+
+                <p>
+                    The enhanced application requires users to authenticate
+                    before accessing evidence records. The login screen
+                    restricts the system to authorized personnel and provides
+                    a separate option for new users to request an account.
+                </p>
+
+                <p>
+                    During registration, users enter identifying information
+                    and select an organizational role. The account is not
+                    immediately activated. Instead, it remains pending until
+                    an administrator reviews the request.
+                </p>
+
+                <div class="screenshot-grid screenshot-grid-two">
+
+                    <figure class="evidence-photo">
+
+                        <img src="images/enhancement-1/homescreen.jpg"
+                             alt="Evidence Tracker user login screen"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 1.</strong>
+                            Secure login screen requiring authentication
+                            before access to evidence records is granted.
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="evidence-photo">
+
+                        <img src="images/enhancement-1/create-new-account.jpg"
+                             alt="Evidence Tracker create new account form"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 2.</strong>
+                            New account form allowing a user to enter
+                            identifying information and select a requested
+                            role.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </section>
+
+            <!-- Administrator Approval -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Administrator Approval Workflow
+                </h2>
+
+                <p>
+                    A new administrator approval workflow prevents account
+                    registration from automatically granting application
+                    access. New accounts remain in a pending state until an
+                    administrator reviews the request.
+                </p>
+
+                <p>
+                    The main administrator dashboard displays the number of
+                    requests awaiting review. Administrators can then open the
+                    pending-requests page and approve or reject each account
+                    based on the requested role and user information.
+                </p>
+
+                <div class="screenshot-grid screenshot-grid-two">
+
+                    <figure class="evidence-photo">
+
+                        <img src="images/enhancement-1/admin-dashboard.jpg"
+                             alt="Administrator dashboard showing pending account requests">
+
+                        <figcaption>
+                            <strong>Figure 3.</strong>
+                            Administrator dashboard displaying the number of
+                            account requests awaiting review.
+                        </figcaption>
+
+                    </figure>
+
+                    <figure class="evidence-photo">
+
+                        <img src="images/enhancement-1/pending-requests-page.jpg"
+                             alt="Administrator account request approval and rejection screen"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 4.</strong>
+                            Pending account requests can be approved or
+                            rejected by an administrator.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </section>
+
+            <!-- Role-Based Access -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Role-Based Access Control
+                </h2>
+
+                <p>
+                    Role-based access control limits application functions
+                    according to each user's responsibilities. Crime Scene
+                    Investigators can add and update evidence records, while
+                    Detectives receive read-only access. Administrative
+                    functions remain limited to approved administrators.
+                </p>
+
+                <div class="role-grid role-grid-two">
+
+                    <article class="role-card">
+
+                        <h3>
+                            Crime Scene Investigator
+                        </h3>
+
+                        <figure class="evidence-photo">
+
+                            <img src="images/enhancement-1/csi-access.jpg"
+                                 alt="Crime Scene Investigator evidence screen with add and update controls">
+
+                            <figcaption>
+                                <strong>Figure 5.</strong>
+                                Crime Scene Investigator access to add and
+                                update evidence records.
+                            </figcaption>
+
+                        </figure>
+
+                        <ul class="permission-list">
+                            <li class="allowed">
+                                View evidence
+                            </li>
+
+                            <li class="allowed">
+                                Add evidence
+                            </li>
+
+                            <li class="allowed">
+                                Update evidence
+                            </li>
+
+                            <li class="restricted">
+                                Manage user accounts
+                            </li>
+
+                            <li class="restricted">
+                                Approve account requests
+                            </li>
+                        </ul>
+
+                    </article>
+
+                    <article class="role-card">
+
+                        <h3>
+                            Detective
+                        </h3>
+
+                        <figure class="evidence-photo">
+
+                            <img src="images/enhancement-1/detective-access-read-only.jpg"
+                                 alt="Detective read-only evidence screen"
+                                 loading="lazy">
+
+                            <figcaption>
+                                <strong>Figure 6.</strong>
+                                Detective interface providing read-only access
+                                to evidence records.
+                            </figcaption>
+
+                        </figure>
+
+                        <ul class="permission-list">
+                            <li class="allowed">
+                                View evidence
+                            </li>
+
+                            <li class="restricted">
+                                Add evidence
+                            </li>
+
+                            <li class="restricted">
+                                Update evidence
+                            </li>
+
+                            <li class="restricted">
+                                Delete evidence
+                            </li>
+
+                            <li class="restricted">
+                                Manage user accounts
+                            </li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- User Management -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    User Management
+                </h2>
+
+                <div class="feature-layout">
+
+                    <div class="feature-text">
+
+                        <p>
+                            Administrators have access to a dedicated user
+                            management interface where approved accounts can
+                            be reviewed, edited, or disabled. Each account
+                            displays the user's name, username, email address,
+                            and assigned role.
+                        </p>
+
+                        <p>
+                            The interface also identifies the currently
+                            logged-in administrator. This distinction helps
+                            prevent unintended account changes and supports
+                            safer administrative control.
+                        </p>
+
+                    </div>
+
+                    <figure class="evidence-photo feature-image">
+
+                        <img src="images/enhancement-1/current-users-page.jpg"
+                             alt="Evidence Tracker current users management screen"
+                             loading="lazy">
+
+                        <figcaption>
+                            <strong>Figure 7.</strong>
+                            Administrator user-management screen showing
+                            approved users and their assigned roles.
+                        </figcaption>
+
+                    </figure>
+
+                </div>
+
+            </section>
+
+            <!-- Results -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Enhancement Results
+                </h2>
+
+                <p>
+                    The redesigned application now supports multiple user
+                    types with clearly defined permissions. Authentication
+                    protects evidence records from unauthenticated access,
+                    while the approval workflow gives administrators control
+                    over who can enter the system.
+                </p>
+
+                <p>
+                    The user interface also communicates available functions
+                    according to the active role. Users are not simply warned
+                    that an action is restricted; unavailable controls are
+                    removed from their interface. This creates a more usable
+                    design while reducing opportunities for unauthorized
+                    actions.
+                </p>
+
+            </section>
+
+            <!-- Reflection -->
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Reflection
+                </h2>
+
+                <p>
+                    Redesigning the original inventory management application
+                    required significantly more than changing its appearance.
+                    The enhancement introduced authentication, authorization,
+                    administrator approval, and evidence-specific workflows
+                    that changed how users interact with the system.
+                </p>
+
+                <p>
+                    Implementing these features required careful planning of
+                    application logic, database interactions, and user
+                    permissions so that each role could access only the
+                    functions appropriate to its responsibilities. These
+                    improvements produced a more secure, maintainable, and
+                    realistic application while demonstrating software
+                    engineering principles that extended beyond the original
+                    project requirements.
+                </p>
+
+            </section>
+
+            <!-- Evidence Scale -->
+            <div class="evidence-ruler"
+                 aria-hidden="true">
+
+                <div class="ruler-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
