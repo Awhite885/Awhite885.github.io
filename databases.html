@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Software Design and Engineering enhancement for Albert White's CS 499 Evidence Tracker capstone project.">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>
+        Databases | Albert White
+    </title>
+</head>
+
+<body>
+
+    <div class="site-container">
+
+        <!-- Website Header -->
+        <header class="site-header">
+
+            <h1>Albert White</h1>
+
+            <h2>Computer Science ePortfolio</h2>
+
+            <p class="course-title">
+                CS 499 Computer Science Capstone
+            </p>
+
+            <div class="project-stamp">
+                Case File<br>
+                Evidence Tracker<br>
+                CS 499 Capstone
+            </div>
+
+        </header>
+
+        <!-- Main Navigation -->
+        <nav class="main-navigation"
+             aria-label="Main navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="code-review.html">
+                        Code Review
+                    </a>
+                </li>
+
+                <li>
+                    <a href="software-design.html">
+                        Software Design &amp; Engineering
+                    </a>
+                </li>
+
+                <li>
+                    <a href="algorithms.html">
+                        Algorithms &amp; Data Structures
+                    </a>
+                </li>
+
+                <li>
+                    <a class="active"
+                       href="databases.html">
+                        Databases
+                    </a>
+                </li>
+
+                <li>
+                    <a href="artifacts.html">
+                        Evidence Tracker Project Artifacts
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- Page Content -->
+        <main class="enhancement-page">
+
+            <section class="paper-card page-introduction">
+
+                <p class="section-label">
+                    Enhancement Three
+                </p>
+
+                <h2 class="section-heading">
+                    Databases
+                </h2>
+
+                <h3>Artifact Overview</h3>
+
+                <p>
+                    This artifact is my Evidence Tracker Android application, originally
+                    developed during CS 360: Mobile Architecture and Programming using
+                    Android Studio, Java, XML layouts, and a local SQLite database.
+                    Although the original application successfully stored evidence
+                    records, it maintained only the current version of each record.
+                    Whenever evidence was updated, the previous information was
+                    permanently overwritten. This enhancement redesigned the database to
+                    preserve historical information while improving data integrity,
+                    accountability, and long-term record management.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Why I Selected This Artifact</h3>
+
+                <p>
+                    I selected this artifact because databases serve as the foundation of
+                    nearly every software application. Evidence management depends on
+                    reliable, organized, and traceable information, making database
+                    design particularly important. Enhancing the SQLite database allowed
+                    me to apply relational database concepts while creating functionality
+                    that better reflects professional evidence management systems.
+                </p>
+
+                <p>
+                    The original application successfully stored evidence information
+                    using SQLite but permanently replaced previous values whenever a
+                    record was modified. This prevented investigators from reviewing
+                    historical evidence activity and limited accountability. These
+                    limitations created an opportunity to redesign the database while
+                    preserving the application's existing functionality.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Database Enhancements</h3>
+
+                <p>
+                    This enhancement introduced an Audit Log table that preserves
+                    historical evidence activity instead of permanently overwriting
+                    information. Additional database methods retrieve audit records and
+                    present them through a dedicated Android interface, allowing users to
+                    review additions, updates, and deletions performed throughout the
+                    life of an investigation.
+                </p>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- Evidence Database -->
+            <!-- ========================= -->
+
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Evidence Database Redesign
+                </h2>
+
+                <p>
+                    The original SQLite database stored evidence information in a single
+                    table that supported standard create, read, update, and delete
+                    operations. During this enhancement, the database was redesigned to
+                    support historical tracking while maintaining compatibility with the
+                    existing Android application. Figure 1 illustrates the current
+                    evidence records alongside the corresponding SQLite database table.
+                </p>
+
+                <figure class="evidence-photo">
+
+                    <img src="images/enhancement-3/evidence-database.jpg"
+                         alt="Evidence database table and Android application"
+                         loading="lazy">
+
+                    <figcaption>
+                        <strong>Figure 1.</strong>
+                        Evidence records stored within SQLite alongside the updated
+                        Android application.
+                    </figcaption>
+
+                </figure>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- Audit Log Database -->
+            <!-- ========================= -->
+
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Audit Log Database
+                </h2>
+
+                <p>
+                    One of the most significant improvements was the introduction of an
+                    Audit Log table. Rather than permanently overwriting evidence
+                    information, significant events are recorded together with the case
+                    number, evidence item, audit action, user responsible, timestamp,
+                    status, and location. This redesign preserves historical information
+                    while maintaining current evidence separately, improving both data
+                    integrity and accountability.
+                </p>
+
+                <figure class="evidence-photo">
+
+                    <img src="images/enhancement-3/audit-history-database.jpg"
+                         alt="SQLite Audit Log table"
+                         loading="lazy">
+
+                    <figcaption>
+                        <strong>Figure 2.</strong>
+                        SQLite Audit Log table preserving historical evidence activity.
+                    </figcaption>
+
+                </figure>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- Audit Interface -->
+            <!-- ========================= -->
+
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Audit Log Interface
+                </h2>
+
+                <p>
+                    To complement the redesigned database, I developed an Audit Log
+                    interface that retrieves historical information from the Audit Log
+                    table and presents it in a readable format. Investigators can review
+                    evidence additions, updates, and deletions together with the user
+                    responsible for each action. Providing access to historical records
+                    demonstrates how the redesigned database supports accountability
+                    throughout an investigation.
+                </p>
+
+                <figure class="evidence-photo">
+
+                    <img src="images/enhancement-3/audit-log-interface.jpg"
+                         alt="Audit Log Android interface"
+                         loading="lazy">
+
+                    <figcaption>
+                        <strong>Figure 3.</strong>
+                        Audit Log interface displaying historical evidence activity.
+                    </figcaption>
+
+                </figure>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- Results -->
+            <!-- ========================= -->
+
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Enhancement Results
+                </h2>
+
+                <p>
+                    Collectively, these database enhancements transformed the original
+                    application from a system that maintained only current evidence
+                    information into one capable of preserving historical audit records.
+                    The redesigned SQLite database improves traceability, supports
+                    accountability, and better reflects how evidence information is
+                    managed throughout an investigation. Although the application
+                    continues to use SQLite, the redesigned schema provides a stronger
+                    foundation for future enhancements while maintaining compatibility
+                    with the existing Android architecture.
+                </p>
+
+            </section>
+
+
+
+            <!-- ========================= -->
+            <!-- Reflection -->
+            <!-- ========================= -->
+
+            <section class="paper-card">
+
+                <h2 class="section-heading">
+                    Reflection
+                </h2>
+
+                <h3>What I Learned</h3>
+
+                <p>
+                    This enhancement demonstrated that effective database design extends
+                    beyond storing information correctly. Preserving historical data,
+                    maintaining integrity, and designing relationships that support
+                    future growth are equally important considerations. Developing the
+                    Audit Log reinforced that database changes must protect existing
+                    functionality while introducing new capabilities that improve the
+                    overall application.
+                </p>
+
+                <p>
+                    One of the greatest challenges involved redesigning the database
+                    without disrupting the application's existing workflows.
+                    Modifications to the database required corresponding updates to
+                    Android activities, RecyclerView adapters, model classes, and
+                    database helper methods. Thorough testing confirmed that evidence
+                    creation, updating, retrieval, and audit history continued to
+                    function correctly after the redesign.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Course Outcome Reflection</h3>
+
+                <p>
+                    This enhancement primarily demonstrates <strong>
+                        Course Outcomes One,
+                        Two, Four, and Five
+                    </strong>. It strengthened my understanding of
+                    relational database design, SQLite implementation, data integrity,
+                    and preserving historical information while maintaining application
+                    performance. The redesign also reinforced the importance of
+                    developing database solutions that support long-term organizational
+                    needs rather than simply storing current information.
+                </p>
+
+                <p>
+                    Overall, this enhancement transformed the Evidence Tracker from an
+                    application that stored only the latest evidence information into a
+                    more realistic evidence management system capable of preserving
+                    historical records. The project strengthened my database design,
+                    Android development, software testing, and software engineering
+                    skills while producing a more maintainable and professional
+                    application.
+                </p>
+
+            </section>
+
+            <!-- Evidence Scale -->
+            <div class="evidence-ruler"
+                 aria-hidden="true">
+
+                <div class="ruler-numbers">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                    <span>11</span>
+                    <span>12</span>
+                    <span>13</span>
+                    <span>14</span>
+                    <span>15</span>
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
