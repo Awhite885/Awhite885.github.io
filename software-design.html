@@ -78,8 +78,8 @@
                 </li>
 
                 <li>
-                    <a href="self-assessment.html">
-                        Professional Self-Assessment
+                    <a ref="artifacts.html">
+                        Evidence Tracker Project Artifacts
                     </a>
                 </li>
 
@@ -90,7 +90,6 @@
         <!-- Page Content -->
         <main class="enhancement-page">
 
-            <!-- Overview -->
             <section class="paper-card page-introduction">
 
                 <p class="section-label">
@@ -101,104 +100,58 @@
                     Software Design &amp; Engineering
                 </h2>
 
+                <h3>Artifact Overview</h3>
+
                 <p>
-                    This enhancement focused on redesigning the original
-                    CS 360 inventory management application into a secure
-                    Android-based Evidence Tracker. The software architecture
-                    was expanded to support user authentication,
-                    administrator-controlled account approval, role-based
-                    authorization, and an interface tailored to evidence
-                    management.
+                    This artifact is my <strong>Evidence Tracker</strong> Android application,
+                    originally developed during <strong>CS 360: Mobile Architecture and Programming</strong>.
+                    Although the original assignment was designed as an inventory management
+                    application, I redesigned it into an evidence management system that reflects
+                    professional crime scene workflows. This enhancement focuses on improving the
+                    application's software architecture, maintainability, and security through
+                    software engineering best practices.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Why I Selected This Artifact</h3>
+
+                <p>
+                    I selected this application because it demonstrates my ability to apply
+                    software engineering principles to solve a real-world problem. As a Crime
+                    Scene Investigator, I understand that evidence management requires secure
+                    workflows, dependable software, and clearly defined user responsibilities.
+                    Enhancing this project allowed me to combine my professional experience with
+                    software engineering while transforming a classroom assignment into a more
+                    realistic evidence management system.
                 </p>
 
                 <p>
-                    These improvements strengthened the usability,
-                    maintainability, and security of the application while
-                    aligning the system more closely with real-world evidence
-                    management workflows.
+                    The original application successfully supported authentication and evidence
+                    management but lacked role-specific permissions, administrator approval, and
+                    modular organization. These limitations created an opportunity to redesign
+                    the application by improving maintainability, security, and overall software
+                    architecture.
                 </p>
 
-            </section>
+                <hr class="section-divider">
 
-            <!-- Enhancement Objectives -->
-            <section class="paper-card">
+                <h3>Software Design Enhancements</h3>
 
-                <h2 class="section-heading">
-                    Enhancement Objectives
-                </h2>
+                <p>
+                    The enhancement introduced role-based access control supporting
+                    Administrators, Crime Scene Investigators, and Detectives. Administrator
+                    approval of new accounts, dedicated user management, secure authentication,
+                    and authorization logic were added to better reflect professional evidence
+                    management systems.
+                </p>
 
-                <div class="objective-grid">
-
-                    <div class="objective-item">
-                        <span class="objective-check"
-                              aria-hidden="true">
-                            ✓
-                        </span>
-
-                        <span>
-                            Convert the inventory system into an Evidence
-                            Tracker.
-                        </span>
-                    </div>
-
-                    <div class="objective-item">
-                        <span class="objective-check"
-                              aria-hidden="true">
-                            ✓
-                        </span>
-
-                        <span>
-                            Improve the user interface and application
-                            navigation.
-                        </span>
-                    </div>
-
-                    <div class="objective-item">
-                        <span class="objective-check"
-                              aria-hidden="true">
-                            ✓
-                        </span>
-
-                        <span>
-                            Implement secure user authentication.
-                        </span>
-                    </div>
-
-                    <div class="objective-item">
-                        <span class="objective-check"
-                              aria-hidden="true">
-                            ✓
-                        </span>
-
-                        <span>
-                            Add an administrator-controlled account approval
-                            process.
-                        </span>
-                    </div>
-
-                    <div class="objective-item">
-                        <span class="objective-check"
-                              aria-hidden="true">
-                            ✓
-                        </span>
-
-                        <span>
-                            Introduce role-based access control.
-                        </span>
-                    </div>
-
-                    <div class="objective-item">
-                        <span class="objective-check"
-                              aria-hidden="true">
-                            ✓
-                        </span>
-
-                        <span>
-                            Add administrator user-management features.
-                        </span>
-                    </div>
-
-                </div>
+                <p>
+                    Evidence management responsibilities were also separated into dedicated
+                    activities, improving maintainability while reducing complexity within the
+                    original application. These changes created a cleaner architecture that is
+                    easier to understand, maintain, and expand.
+                </p>
 
             </section>
 
@@ -499,23 +452,54 @@
                     Reflection
                 </h2>
 
+                <h3>What I Learned</h3>
+
                 <p>
-                    Redesigning the original inventory management application
-                    required significantly more than changing its appearance.
-                    The enhancement introduced authentication, authorization,
-                    administrator approval, and evidence-specific workflows
-                    that changed how users interact with the system.
+                    This enhancement reinforced that software engineering involves much more
+                    than adding new functionality. Throughout the redesign, I learned the
+                    importance of separating responsibilities into dedicated activities,
+                    improving maintainability, and enforcing security through application
+                    logic rather than relying solely on interface controls. Refactoring the
+                    application into specialized components created a cleaner architecture
+                    that is easier to understand, test, and extend.
                 </p>
 
                 <p>
-                    Implementing these features required careful planning of
-                    application logic, database interactions, and user
-                    permissions so that each role could access only the
-                    functions appropriate to its responsibilities. These
-                    improvements produced a more secure, maintainable, and
-                    realistic application while demonstrating software
-                    engineering principles that extended beyond the original
-                    project requirements.
+                    One of the greatest challenges involved restructuring the application
+                    while preserving existing functionality. Database operations,
+                    authentication, RecyclerView updates, navigation, SMS notifications,
+                    and role-based permissions all had to continue working together after
+                    the redesign. Incremental testing and careful planning allowed each
+                    enhancement to be integrated without disrupting the application's
+                    existing features, reinforcing the importance of thoughtful software
+                    design and comprehensive testing.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Course Outcome Reflection</h3>
+
+                <p>
+                    This enhancement primarily demonstrates <strong>
+                        Course Outcomes One,
+                        Two, Four, and Five
+                    </strong>. It strengthened my ability to evaluate an
+                    existing software artifact, apply software engineering principles to
+                    improve application architecture, and develop a secure solution that
+                    addresses an industry-specific problem. Implementing role-based access
+                    control, administrator approval workflows, and modular application
+                    design also reinforced the importance of creating software that is both
+                    maintainable and aligned with professional development practices.
+                </p>
+
+                <p>
+                    Although this enhancement focused primarily on software design and
+                    engineering, it also established the foundation for the algorithm and
+                    database enhancements completed later in the capstone. Together, these
+                    improvements transformed the original classroom inventory application
+                    into a more realistic evidence management system while demonstrating my
+                    growth in Android development, secure application design, software
+                    testing, and professional software engineering.
                 </p>
 
             </section>
