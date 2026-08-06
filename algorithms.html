@@ -78,8 +78,8 @@
                 </li>
 
                 <li>
-                    <a href="self-assessment.html">
-                        Professional Self-Assessment
+                    <a href="artifacts.html">
+                        Evidence Tracker Project Artifacts
                     </a>
                 </li>
 
@@ -101,21 +101,55 @@
                     Algorithms &amp; Data Structures
                 </h2>
 
+                <h3>Artifact Overview</h3>
+
                 <p>
-                    This enhancement focused on improving how the Evidence
-                    Tracker locates, organizes, and displays evidence records.
-                    The original application allowed users to browse the full
-                    evidence list, but it did not provide search, filtering,
-                    or sorting features.
+                    This artifact is my Evidence Tracker Android application, originally
+                    developed during CS 360: Mobile Architecture and Programming using
+                    Android Studio, Java, XML layouts, and a local SQLite database.
+                    Although the original project functioned as an inventory management
+                    application, I redesigned it into an evidence management system that
+                    better reflects professional investigative workflows. This enhancement
+                    focused on improving the efficiency, organization, and usability of
+                    evidence retrieval through search, filtering, sorting, and improved
+                    data management.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Why I Selected This Artifact</h3>
+
+                <p>
+                    I selected this artifact because it demonstrates my ability to apply
+                    algorithms and data structures to solve a practical problem.
+                    Evidence management systems often contain hundreds or thousands of
+                    records, making efficient retrieval and organization essential.
+                    Enhancing the application's search, filtering, and sorting
+                    capabilities allowed me to improve both the user experience and the
+                    underlying processing logic while applying fundamental computer
+                    science concepts to a real-world application.
                 </p>
 
                 <p>
-                    Search functionality was added for case IDs and item
-                    descriptions. Filtering was added for evidence status and
-                    storage location, while sorting options allow records to
-                    be organized by case ID, description, status, or location.
-                    These enhancements improve usability as the number of
-                    stored evidence records increases.
+                    The original application displayed every evidence record through a
+                    RecyclerView connected to SQLite. Although this approach satisfied
+                    the original course requirements, it lacked efficient methods for
+                    locating, organizing, and displaying evidence as the number of
+                    records increased. These limitations created an opportunity to
+                    redesign how evidence records are processed and presented.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Algorithm &amp; Data Structure Enhancements</h3>
+
+                <p>
+                    This enhancement introduced search by case ID and item description,
+                    filtering by evidence status and storage location, multiple sorting
+                    options, and a separate filtered collection that preserves the
+                    original dataset while displaying only matching results. Together,
+                    these improvements create a more responsive application that better
+                    supports professional evidence management.
                 </p>
 
             </section>
@@ -788,34 +822,59 @@ evidenceAdapter.updateData(filteredEvidence);</code></pre>
                     Reflection
                 </h2>
 
+                <h3>What I Learned</h3>
+
                 <p>
-                    This enhancement demonstrated that effective algorithm
-                    design involves more than producing the correct result. It
-                    also requires considering efficiency, maintainability, and
-                    how several features interact within the same workflow.
+                    This enhancement reinforced that effective algorithm design involves
+                    more than producing the correct result. It also requires considering
+                    efficiency, maintainability, and how multiple features interact
+                    within the same workflow. While implementing search, filtering, and
+                    sorting individually was straightforward, integrating them into a
+                    unified process required careful planning and extensive testing.
                 </p>
 
                 <p>
-                    Search, filtering, and sorting were each manageable
-                    individually, but combining them required additional
-                    planning. Every operation had to update the displayed
-                    evidence without modifying the original dataset or
-                    disrupting the application's existing functionality.
+                    One of the most valuable lessons involved selecting the appropriate
+                    data structure. Rather than modifying the original evidence
+                    collection, I maintained a separate filtered list that dynamically
+                    displays matching records while preserving the complete dataset.
+                    This simplified the application's logic, reduced unnecessary
+                    database operations, and made it easy to clear search and filter
+                    criteria without reloading the data.
                 </p>
 
                 <p>
-                    Creating a separate filtered list was one of the most
-                    important design decisions. The complete collection
-                    remains intact, while the displayed results change
-                    dynamically. This approach simplifies clearing search and
-                    filter options and prevents unnecessary database queries.
+                    Another challenge involved ensuring that every combination of search
+                    terms, filters, sorting options, and reset operations behaved
+                    consistently. Testing these features together reinforced the
+                    importance of incremental development and comprehensive software
+                    testing when implementing interconnected algorithms.
+                </p>
+
+                <hr class="section-divider">
+
+                <h3>Course Outcome Reflection</h3>
+
+                <p>
+                    This enhancement primarily demonstrates <strong>
+                        Course Outcomes One,
+                        Two, Four, and Five
+                    </strong>. It strengthened my ability to design
+                    efficient algorithms, organize data using appropriate structures,
+                    improve software usability, and apply computing techniques to solve
+                    an industry-specific problem. Although the primary emphasis was on
+                    algorithms and data structures, the enhancement also maintained the
+                    secure role-based architecture established during the software
+                    engineering enhancement.
                 </p>
 
                 <p>
-                    The enhancement strengthened my understanding of how
-                    algorithms and data structures affect the user experience.
-                    The Evidence Tracker now provides a more practical method
-                    for locating and organizing evidence information.
+                    Overall, this enhancement transformed the Evidence Tracker from a
+                    basic evidence display application into a more practical tool for
+                    locating and organizing information. The project strengthened my
+                    understanding of algorithm design, data management, Android
+                    development, software testing, and the importance of creating
+                    solutions that are both technically efficient and user-friendly.
                 </p>
 
             </section>
