@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:background="#EEEEEE">
+
+    <TextView
+        android:id="@+id/textPendingUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textPendingRole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Role"
+        android:textSize="16sp"
+        android:paddingTop="6dp" />
+
+    <TextView
+        android:id="@+id/textPendingRequestDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Requested"
+        android:textSize="16sp"
+        android:paddingTop="6dp"
+        android:paddingBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonApproveUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Approve" />
+
+        <Button
+            android:id="@+id/buttonRejectUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="Reject" />
+
+    </LinearLayout>
+
+</LinearLayout>

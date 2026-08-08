@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/mainAddEvidence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/cardColor"
+        android:padding="16dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp">
+
+        <!-- ADD EVIDENCE FORM -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Evidence"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- INPUT CASE ID FIELD -->
+        <EditText
+            android:id="@+id/editCaseId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Case ID"
+            android:backgroundTint="@color/lightGrey"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightGrey"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- INPUT ITEM DESCRIPTION FIELD -->
+        <EditText
+            android:id="@+id/editItemDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Item Description"
+            android:backgroundTint="@color/lightGrey"
+            android:textColor="@color/white"
+            android:textColorHint="@color/lightGrey"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- INPUT STATUS FIELD -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textColor="@color/white"
+            android:layout_marginBottom="4dp" />
+        <!-- STATUS DROPDOWN -->
+        <Spinner
+            android:id="@+id/spinnerStatus"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/lightGrey"/>
+
+        <!-- INPUT LOCATION FIELD -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Storage Location"
+            android:textColor="@color/white"
+            android:layout_marginBottom="4dp" />
+
+        <!-- LOCATION DROPDOWN -->
+        <Spinner
+            android:id="@+id/spinnerLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/lightGrey"/>
+
+        <!-- DATE & TIME TEXT -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date &amp; Time: Auto-generated"
+            android:textColor="@color/lightGrey"
+            android:textStyle="italic"
+            android:layout_marginBottom="12dp" />
+
+        <!-- ADD EVIDENCE BUTTON -->
+        <Button
+            android:id="@+id/buttonAddEvidence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Evidence"
+            android:backgroundTint="@color/accentColor"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Back"
+            android:backgroundTint="@color/warningColor"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+</ScrollView>

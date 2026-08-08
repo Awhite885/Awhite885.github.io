@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/cardColor"
+    android:padding="12dp"
+    android:layout_marginBottom="10dp"
+    android:elevation="2dp">
+
+    <!-- CASE ID -->
+    <TextView
+        android:id="@+id/textCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Case:"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <!-- ITEM -->
+    <TextView
+        android:id="@+id/textItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item:"
+        android:textColor="@color/lightGrey"
+        android:layout_marginTop="2dp" />
+
+    <!-- STATUS -->
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status:"
+        android:textColor="@color/lightGrey"
+        android:layout_marginTop="2dp" />
+
+    <!-- LOCATION -->
+    <TextView
+        android:id="@+id/textLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location:"
+        android:textColor="@color/lightGrey"
+        android:layout_marginTop="2dp" />
+
+    <!-- DATE & TIME -->
+    <TextView
+        android:id="@+id/textDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date &amp; Time:"
+        android:textColor="@color/lightGrey"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!-- DELETE BUTTON -->
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:backgroundTint="@color/warningColor"
+            android:textColor="@color/white" />
+        <!-- UPDATE BUTTON -->
+        <Button
+            android:id="@+id/buttonUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Update"
+            android:backgroundTint="@color/secondaryColor"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+</LinearLayout>

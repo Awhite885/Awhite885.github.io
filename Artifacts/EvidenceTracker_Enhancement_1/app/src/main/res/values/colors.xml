@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightGrey">#D6E4F0</color>
+    <color name="primaryColor">#2F5D8C</color>
+    <color name="secondaryColor">#4A7BA7</color>
+    <color name="accentColor">#1E3A5F</color>
+    <color name="warningColor">#E57373</color>
+    <color name="cardColor">#3A6A99</color>
+
+</resources>

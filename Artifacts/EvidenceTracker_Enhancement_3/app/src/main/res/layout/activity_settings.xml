@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainSms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- PAGE TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- PAGE DESCRIPTION -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="20dp"
+            android:text="Manage your account and application settings."
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp" />
+
+        <!-- ACCOUNT CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/cardColor"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:text="Account"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textColor="@color/lightGrey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="15dp"
+                android:text="atwhite"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/accentColor"
+                android:text="Change Password"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- SMS NOTIFICATIONS CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:background="@color/cardColor"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="SMS Notifications"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:text="Receive text alerts for important evidence updates."
+                android:textColor="@color/lightGrey"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/editPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/accentColor"
+                android:hint="Enter phone number"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightGrey" />
+
+            <TextView
+                android:id="@+id/textSmsStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:gravity="center"
+                android:text="Current setting: Not selected"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonAllowSms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/accentColor"
+                android:text="Enable SMS Notifications"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/buttonDenySms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryColor"
+                android:text="Disable SMS Notifications"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- LOGOUT BUTTON -->
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Logout"
+            android:textColor="@color/white" />
+
+        <!-- BACK BUTTON -->
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/accentColor"
+            android:text="Back"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</ScrollView>

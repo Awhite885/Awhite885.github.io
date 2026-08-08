@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainAuditLogDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Screen title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Audit Log"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- Screen description -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="View alterations made to the selected evidence item"
+        android:textColor="@color/lightGrey"
+        android:textSize="16sp" />
+
+    <!-- Selected evidence card -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@color/cardColor"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Evidence"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textAuditCaseId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Case ID:"
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textAuditItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Item:"
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textAuditStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Status:"
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textAuditLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Location:"
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <!-- Audit entries heading -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Alteration History"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Audit history list -->
+    <ListView
+        android:id="@+id/listAuditLogDetails"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/lightGrey"
+        android:dividerHeight="1dp" />
+
+    <!-- Back button -->
+    <Button
+        android:id="@+id/buttonAuditDetailsBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/warningColor"
+        android:text="Back"
+        android:textColor="@color/white" />
+
+</LinearLayout>

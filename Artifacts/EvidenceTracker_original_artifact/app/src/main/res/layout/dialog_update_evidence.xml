@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <!-- UPDATE CASEID FIELD -->
+    <EditText
+        android:id="@+id/editUpdateCaseId"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Update Case ID"
+        android:layout_marginBottom="12dp"/>
+    <!-- UPDATE ITEM DESCRIPTION FIELD -->
+    <EditText
+        android:id="@+id/editUpdateItemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Update Item Description"
+        android:layout_marginBottom="12dp"/>
+    <!-- UPDATE STATUS TEXT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Status"
+        android:layout_marginBottom="4dp" />
+    <!-- UPDATE STATUS DROPDOWN -->
+    <Spinner
+        android:id="@+id/spinnerUpdateStatus"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"/>
+    <!-- UPDATE LOCATION TEXT -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Location"
+        android:layout_marginBottom="4dp"/>
+    <!-- UPDATE LOCATION DROPDOWN -->
+    <Spinner
+        android:id="@+id/spinnerUpdateLocation"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="12dp"/>
+
+
+</LinearLayout>

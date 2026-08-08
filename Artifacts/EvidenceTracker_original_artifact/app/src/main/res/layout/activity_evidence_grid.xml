@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GRID CONTAINER -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainGrid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/primaryColor">
+
+    <!-- GRID CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Evidence Records"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- SETTINGS BUTTON -->
+            <Button
+                android:id="@+id/buttonSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="⚙"
+                android:textSize="18sp"
+                android:backgroundTint="@color/accentColor"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- SECTION TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Track and manage evidence items"
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- ADD EVIDENCE CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/cardColor"
+            android:padding="16dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- ADD EVIDENCE FORM -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Evidence"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- INPUT CASE ID FIELD -->
+            <EditText
+                android:id="@+id/editCaseId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Case ID"
+                android:backgroundTint="@color/lightGrey"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightGrey"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- INPUT ITEM DESCRIPTION FIELD -->
+            <EditText
+                android:id="@+id/editItemDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Item Description"
+                android:backgroundTint="@color/lightGrey"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightGrey"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- INPUT STATUS FIELD -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textColor="@color/white"
+                android:layout_marginBottom="4dp" />
+            <!-- STATUS DROPDOWN -->
+            <Spinner
+                android:id="@+id/spinnerStatus"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/lightGrey"/>
+
+            <!-- INPUT LOCATION FIELD -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Storage Location"
+                android:textColor="@color/white"
+                android:layout_marginBottom="4dp" />
+
+            <!-- LOCATION DROPDOWN -->
+            <Spinner
+                android:id="@+id/spinnerLocation"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/lightGrey"/>
+
+            <!-- DATE & TIME TEXT -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date &amp; Time: Auto-generated"
+                android:textColor="@color/lightGrey"
+                android:textStyle="italic"
+                android:layout_marginBottom="12dp" />
+
+            <!-- ADD EVIDENCE BUTTON -->
+            <Button
+                android:id="@+id/buttonAddEvidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Evidence"
+                android:backgroundTint="@color/accentColor"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <!-- SECTION TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Evidence Log"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <!-- RECYCLER VIEW -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/evidenceRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- LOGOUT BUTTON -->
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Logout"
+            android:backgroundTint="@color/warningColor"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MAIN CONTAINER -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLogin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- TITLE -->
+        <TextView
+            android:id="@+id/textAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Evidence Tracker"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <!-- SUBTITLE -->
+        <TextView
+            android:id="@+id/textSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="Secure Evidence Management"
+            android:textSize="16sp"
+            android:textColor="@color/lightGrey"/>
+
+        <!-- LOGIN FORM -->
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Login"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/white"/>
+
+        <!-- USERNAME AND PASSWORD FIELDS -->
+        <EditText
+            android:id="@+id/editUsername"
+            android:background="@color/cardColor"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="@color/lightGrey" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:background="@color/cardColor"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColorHint="@color/lightGrey"/>
+
+        <!-- LOGIN AND CREATE ACCOUNT BUTTONS -->
+        <Button
+            android:id="@+id/buttonLogin"
+            android:backgroundTint="@color/accentColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/white"
+            android:text="Login" />
+
+        <Button
+            android:id="@+id/buttonCreateAccount"
+            android:backgroundTint="@color/secondaryColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Create New Account" />
+
+        <!-- SECURITY WARNING -->
+        <TextView
+            android:id="@+id/textHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Authorized personnel only"
+            android:textSize="14sp"
+            android:textColor="@color/warningColor"/>
+
+    </LinearLayout>
+</ScrollView>

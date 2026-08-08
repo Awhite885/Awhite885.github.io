@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- GRID CONTAINER -->
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainGrid"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryColor"
+    android:fillViewport="true">
+
+    <!-- GRID CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Evidence Records"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <!-- SETTINGS BUTTON -->
+            <Button
+                android:id="@+id/buttonSettings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/accentColor"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="⚙"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <!-- DESCRIPTION -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Track and manage evidence items"
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp" />
+
+        <!-- ADMINISTRATOR PANEL -->
+        <LinearLayout
+            android:id="@+id/adminPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:background="@color/cardColor"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Administrative Tasks"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textPendingCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="12dp"
+                android:text="Pending Requests (0)"
+                android:textColor="@color/warningColor"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonPendingRequests"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/accentColor"
+                    android:text="Pending Users"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/buttonCurrentUsers"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/accentColor"
+                    android:text="Manage Users"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+            <!-- AUDIT HISTORY BUTTON -->
+            <Button
+                android:id="@+id/buttonAuditHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/accentColor"
+                android:text="Audit History"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!-- DIVIDER -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/lightGrey" />
+
+        <!-- ADD EVIDENCE BUTTON -->
+        <Button
+            android:id="@+id/buttonAddEvidence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/accentColor"
+            android:text="Add Evidence"
+            android:textColor="@color/white" />
+
+        <!-- SEARCH AND FILTER CONTROLS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <!-- SEARCH INPUT -->
+            <EditText
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/accentColor"
+                android:hint="Search by Case ID or Item"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:importantForAutofill="no"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textColorHint="@color/lightGrey" />
+
+            <!-- SEARCH BUTTON -->
+            <Button
+                android:id="@+id/buttonSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/accentColor"
+                android:text="Search"
+                android:textColor="@color/white" />
+
+            <!-- FILTER/CLEAR BUTTONS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonOpenFilters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:backgroundTint="@color/accentColor"
+                    android:text="Filters"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/buttonClearFilters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:backgroundTint="@color/warningColor"
+                    android:text="Clear Filters"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <!-- ACTIVE FILTER DESCRIPTION -->
+            <TextView
+                android:id="@+id/textActiveFilters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Showing all evidence"
+                android:textColor="@color/lightGrey"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- EVIDENCE LIST TITLE -->
+        <TextView
+            android:id="@+id/currentEvidenceLogText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Current Evidence Log"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- EVIDENCE RECYCLER VIEW -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/evidenceRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

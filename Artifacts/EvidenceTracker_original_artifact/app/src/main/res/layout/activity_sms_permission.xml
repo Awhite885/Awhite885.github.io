@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MAIN CONTAINER -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainSms"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/primaryColor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <!-- TITLE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMS Notifications"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- DESCRIPTION -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="20dp"
+            android:text="Manage text alerts for important evidence updates"
+            android:textColor="@color/lightGrey"
+            android:textSize="16sp" />
+
+        <!-- PERMISSION REQUEST CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/cardColor"
+            android:padding="10dp"
+            android:elevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- SECTION TITLE -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Permission Request"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
+
+            <!-- DESCRIPTION -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This application can send SMS alerts for evidence-related updates, such as status changes, transfers, and other important notifications."
+                android:textColor="@color/lightGrey"
+                android:layout_marginBottom="12dp" />
+
+            <!-- USER PROMPT -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Allow this app to send text message notifications?"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- ALLOW BUTTON -->
+            <Button
+                android:id="@+id/buttonAllowSms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/accentColor"
+                android:text="Allow SMS Notifications"
+                android:textColor="@color/white" />
+
+            <!-- DENY BUTTON -->
+            <Button
+                android:id="@+id/buttonDenySms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/secondaryColor"
+                android:text="Deny Permission"
+                android:textColor="@color/white" />
+            <!-- Phone number -->
+            <EditText
+                android:id="@+id/editPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter phone number"
+                android:inputType="phone"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"/>
+            <!-- SMS STATUS -->
+            <TextView
+                android:id="@+id/textSmsStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Current setting: Not selected"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <!-- PERMISSION EXPLANATION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/cardColor"
+            android:padding="5dp"
+            android:elevation="3dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If Permission Is Granted"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Automated alerts may be sent when evidence is added, updated, transferred, or requires attention."
+                android:textColor="@color/lightGrey" />
+        </LinearLayout>
+
+        <!-- DENIAL EXPLANATION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/cardColor"
+            android:padding="5dp"
+            android:elevation="3dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="If Permission Is Denied"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The application will continue to function normally, but SMS notifications will remain disabled."
+                android:textColor="@color/lightGrey" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/accentColor"
+            android:text="Back"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</ScrollView>
