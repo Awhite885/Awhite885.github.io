@@ -299,6 +299,18 @@ main {
     font-size: .8rem;
 }
 
+/* ---------------- Portrait ---------------- */
+.profile-photo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+
+    border-radius: 10px;
+    border: 4px solid #ffffff;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+
 /* ==========================================
    SOFTWARE DESIGN PAGE
 ========================================== */
