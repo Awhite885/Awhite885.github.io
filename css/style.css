@@ -50,11 +50,16 @@ body {
 }
 
 /* ==========================================
-   NAVIGATION
+   STICKY NAVIGATION
 ========================================== */
 
 .main-navigation {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background: #123a68;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: box-shadow .25s ease, background-color .25s ease;
 }
 
     .main-navigation ul {
@@ -84,6 +89,7 @@ body {
         text-transform: uppercase;
         letter-spacing: .6px;
         text-align: center;
+        transition: background-color .25s ease, color .25s ease;
     }
 
         .main-navigation a:hover {
@@ -95,7 +101,6 @@ body {
         background: #f2ecde;
         color: #123a68;
     }
-
 /* ==========================================
    MAIN LAYOUT
 ========================================== */
@@ -589,4 +594,11 @@ main {
     .search-processing-code {
         font-size: 0.68rem;
     }
+}
+/* ==========================================
+   SCROLL OFFSET
+========================================== */
+
+html {
+    scroll-padding-top: 80px;
 }
