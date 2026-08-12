@@ -492,8 +492,17 @@ main {
 
 @media (max-width: 768px) {
 
+    .code-example {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     .search-processing-code {
+        display: block;
         font-size: 0.68rem;
         line-height: 1.35;
+        max-width: 100%;
+        overflow-x: auto;
     }
+
 }
