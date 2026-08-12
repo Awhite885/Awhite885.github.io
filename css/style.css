@@ -485,3 +485,15 @@ main {
     margin-top: 8px;
     margin-bottom: 0;
 }
+
+/* ==========================================
+   Mobile Code Example
+========================================== */
+
+@media (max-width: 768px) {
+
+    .search-processing-code {
+        font-size: 0.68rem;
+        line-height: 1.35;
+    }
+}
