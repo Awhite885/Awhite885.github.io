@@ -128,8 +128,14 @@ main {
 }
 
 .portfolio-list {
-    padding-left: 20px;
+    margin: 20px 0;
+    padding-left: 40px;
     line-height: 2;
+    text-align: left;
+}
+
+.portfolio-list li {
+    text-align: left;
 }
 
 /* ==========================================
